@@ -1,6 +1,6 @@
-let arrOne = ['x', 'y', 'z']
-arrOne.splice(1,1)
-console.log(arrOne)
+// let arrOne = ['x', 'y', 'z']
+// arrOne.splice(1,1)
+// console.log(arrOne)
 
 // let arrTwo = [
 //     ['x', 'z', 'y'],
@@ -9,28 +9,34 @@ console.log(arrOne)
 // // console.log(arrTwo)
 // console.log(arrTwo[1][2])
 
+// ANCHOR ДОБАВЛЕНИЕ ЭЛЕМЕНТА В КОНЕЦ МАССИВА
 // let arrThree = ['q', 'w', 'e']
 // arrThree.push('t')
 // console.log(arrThree)
 
 // let arrFour = ['u', 'i', 'o']
 
+// ANCHOR УДАЛЕНИЕ ПРЕВОГО ЭЛЕМЕНТА МАССИВА И ПОСТАНОВКА ВТОРОГО НА ЕГО МЕСТО
 // arrFour.shift()
 // console.log(arrFour)
 
+// ANCHOR УДАЛЕНИЕ ПОСЛЕДНЕГО ЭЛЕМЕНТА 
 // let arrFive = ['a', 's', 'f']
 // arrFive.pop()
 // console.log(arrFive)
 
 // let arrSix = ['h', 'j', 'k']
 
+// ANCHOR ДОБАВЛЕНИЕ ЭЛЕМЕНТА В НАЧАЛО МАССИВА СДВИГАЯ ВСЁ ОСТАЛЬНОЕ 
 // arrSix.unshift('x')
 // console.log(arrSix)
 
+// ANCHOR ПРОСМОТР УДАЛЁННОГО ЭЛЕМЕНТА ИЗ МАССИВА
 // let arrSeven = [1, 2, 3]
 // let removed = arrSeven.splice(1,1)
 // console.log(removed)
 
+// ANCHOR ДОБАВЛЕНИЕ И УДАЛЕНИЕ ЭЛЕМЕНТОВ В МАССИВ
 // let arrEight = ['Егор', 'Егор', 'Вася', 'Коля']
 // arrEight.splice(0,2, 'Саша', 'Петя')
 // console.log(arrEight)
@@ -47,10 +53,13 @@ console.log(arrOne)
 // let arrTwelve = arrTen1.slice()
 // console.log(arrTwelve)
 
+// ANCHOR КОПИРОВАНИЕ МАССИВА И ДОБАВЛЕНИЕ В НЕГО ЭЛЕМЕНТА
 // let arrThirteen = ['1', 'a', 'g', 'h']
 // let arrFourteen = arrThirteen.concat('shock')
 // console.log(arrFourteen)
 
+
+// ANCHOR ПОИСК В МАССИВЕ
 // let arrFiveteen = ['sa', 'va', 'da', 'troi']
 // // console.log(arrFiveteen.indexOf('sa'))
 // console.log(arrFiveteen.indexOf('da', 3))
@@ -70,15 +79,107 @@ console.log(arrOne)
 // let resultTwo = arrSixteen.findIndex(item => item.name === 'Sekunda')
 // console.log(resultTwo)
 
-//FILTER
+// ANCHOR FILTER ФИЛЬТРАЦИЯ
 
-let arrEighteen = [
-    { name: 'Sasha', age: 16},
-    { name: 'Dasha', age: 17},
-    { name: 'Masha', age: 18},
-    { name: 'Pasha', age: 25},
-]
-let reuslt = arrEighteen.filter(function(item, index, array){
-    return item.age <= 18
-})
-console.log(reuslt)
+// let arrEighteen = [
+//     { name: 'Sasha', age: 16},
+//     { name: 'Dasha', age: 17},
+//     { name: 'Masha', age: 18},
+//     { name: 'Pasha', age: 25},
+// ]
+// let reuslt = arrEighteen.filter(function(item, index, array){
+//     return item.age <= 18
+// })
+// console.log(reuslt)
+
+// ANCHOR ДОБАВЛЕНИЕ ЭЛЕМЕНТА В МАССИВ
+// let arrTwo = [
+//     ['x', 'z', 'y'],
+//     ['a','b', 'n'],
+//     ['s'],
+// ]
+// arrTwo[3] = '123'
+// console.log(arrTwo)
+// console.log(arrTwo.length)
+
+// console.log(arrTwo[1][2])
+
+// ANCHOR СОРТИРОВКА
+// let arrOne1 = ['гба', 'чва', 'бг', 'арп']
+// console.log(arrOne1.sort())
+
+// let matrix = [
+//     ['пять', 'играть', 'дота'],
+//     ['арбуз', 'чма', 'плётка',],
+//     ['герой', 'blank', 'auto'],
+// ]
+// console.log(matrix.sort())
+
+// let arr2 = [5, 4 , 3, 2 , 1, 6, 22, 99, 14, 88]
+// console.log(arr2.sort())
+
+// let arr3 = [12, 14, 56, 2, 3, 4]
+// // console.log(arr3.sort())
+
+// // function compareNum(a, b) {
+// //     if (a > b) return 1
+// //     if (a == b) return 0
+// //     if (a < b) return -1
+// // }
+// // console.log(arr3.sort(compareNum))
+
+// // function compareNum(a, b) {
+// //     console.log(`Что же больше? ${a} и ${b}`);
+// //     // if (a > b) return 1
+// //     // if (a == b) return 0
+// //     // if (a < b) return -1
+// //     // return a - b
+// // }
+// // console.log(arr3.sort(compareNum))
+
+// // console.log(arr3.sort((a, b) => a - b))
+
+// console.log(arr3.reverse())
+
+// ANCHOR ПРЕОБРАЗОВАНИЕ МАССИВОВ 
+ 
+// let arr4 = ['эМиссия ', 'цирк', 'пшик', 'база', 'ачо', 'импликация', 'город']
+
+// let result = arr4.map(function(item, index, array){
+//     return item[1]
+// })
+// console.log(result)
+
+// ANCHOR МЕТОД SPLIT
+
+// let str = 'Гори, ясно, день, погода, цвет'
+
+// let arr6 = str.split(',', 4)
+// console.log(arr6)
+
+// ANCHOR МЕТОД JOIN
+
+// let arr7 = ['Peta', 'Din', 'arbuz', 'chelka']
+// // let str = arr7.join(',')
+// // console.log(str)
+
+// //преобразование массива в строку 
+// console.log(String(arr7))
+
+// ANCHOR МЕТОД Array.isArray
+
+// const str = 'привет привет привет я играю в бисер'
+
+// const arr8 = ['два', 1, 'pale', 'fire']
+
+// if (Array.isArray(str)) {
+//     console.log('Массив на массе')
+// } else {
+//     console.log('Не массив, не на массе')
+// }
+
+// if (Array.isArray(arr8)) {
+//     console.log('Массив на массе')
+// } else {
+//     console.log('Не массив, не на массе')
+// }
