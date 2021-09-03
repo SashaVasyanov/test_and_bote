@@ -183,3 +183,61 @@
 // } else {
 //     console.log('Не массив, не на массе')
 // }
+
+// ANCHOR ПРЕОБРАЗОВАНИЕ ЭЛЕМЕНТОВ МАССИВА 
+
+// let arr0 = ['ol', 'lo', 'olo', 'lol']
+
+// for (let i = 0; i < arr0.length; i++) {
+//     console.log(arr0[i])
+// }
+
+// ANCHOR ПЕРЕБОР ЭЛЕМЕНТОВ МАССИВА ЦИКЛ FOR...OF
+
+// let arr12 = ['i', 'you', 'he', 'she', 'they', 'we']
+
+// for (let arr12Item of arr12) {
+// console.log(arr12Item)
+// }
+
+// ANCHOR ЦИКЛ И МЕТОД FOREACH
+
+//  let arr = ['я', 'живу', 'на', 'улице', 'где', 'растут', 'деревья']
+
+// // arr.forEach(function(item, index, array) {
+// //     console.log(`${item} находится на ${index} в этом массиве ${array}`);
+// // })
+
+// arr.forEach((item, index, array) => {
+//     console.log(`${item} находится на ${index} в этом массиве ${array}`)
+// })
+
+// ANCHOR МЕТОДЫ REDUCE И REDUCERIGHT
+
+// let arr = [5, 2, 7, 11, 9, 18, 23]
+
+// let ReduceArr = arr.reduce(function(previousValue, item, index, array) {
+//     return item + previousValue
+// }, 0)
+// console.log(ReduceArr)
+
+// let arr = ['sasha', 'egpo', 'bodr', 'holod', 'golod']
+// let reduceArr = arr.reduceRight(function(previousValue, item, index, array) {
+//     console.log(previousValue)
+//     console.log(item)
+//     return `${item}, ${previousValue}`
+// })
+// console.log(`слова: ${reduceArr} `)
+
+let users = ['Sasha', 'Masha', 'Pasha', 'Vasya']
+users.push('Olya')
+users.splice(3, 1, 'Elena')
+let removed = users.pop()
+users.unshift('Vasya', 'Egor')
+console.log(users)
+console.log(removed)
+
+let arr1 = ['grey', 'pink', 'green']
+let green = arr1.splice(2,1)
+arr1.push(green)
+console.log(arr1)
