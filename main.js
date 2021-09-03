@@ -229,15 +229,15 @@
 // })
 // console.log(`слова: ${reduceArr} `)
 
-let users = ['Sasha', 'Masha', 'Pasha', 'Vasya']
-users.push('Olya')
-users.splice(3, 1, 'Elena')
-let removed = users.pop()
-users.unshift('Vasya', 'Egor')
-console.log(users)
-console.log(removed)
+// let users = ['Sasha', 'Masha', 'Pasha', 'Vasya']
+// users.push('Olya')
+// users.splice(3, 1, 'Elena')
+// let removed = users.pop()
+// users.unshift('Vasya', 'Egor')
+// console.log(users)
+// console.log(removed)
 
-let arr1 = ['grey', 'pink', 'green']
-let green = arr1.splice(2,1)
-arr1.push(green)
-console.log(arr1)
+// let arr1 = ['grey', 'pink', 'green']
+// let green = arr1.splice(2,1)
+// arr1.push(green)
+// console.log(arr1)
