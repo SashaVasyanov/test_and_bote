@@ -20,14 +20,14 @@
 // arrFour.shift()
 // console.log(arrFour)
 
-// ANCHOR УДАЛЕНИЕ ПОСЛЕДНЕГО ЭЛЕМЕНТА 
+// ANCHOR УДАЛЕНИЕ ПОСЛЕДНЕГО ЭЛЕМЕНТА
 // let arrFive = ['a', 's', 'f']
 // arrFive.pop()
 // console.log(arrFive)
 
 // let arrSix = ['h', 'j', 'k']
 
-// ANCHOR ДОБАВЛЕНИЕ ЭЛЕМЕНТА В НАЧАЛО МАССИВА СДВИГАЯ ВСЁ ОСТАЛЬНОЕ 
+// ANCHOR ДОБАВЛЕНИЕ ЭЛЕМЕНТА В НАЧАЛО МАССИВА СДВИГАЯ ВСЁ ОСТАЛЬНОЕ
 // arrSix.unshift('x')
 // console.log(arrSix)
 
@@ -57,7 +57,6 @@
 // let arrThirteen = ['1', 'a', 'g', 'h']
 // let arrFourteen = arrThirteen.concat('shock')
 // console.log(arrFourteen)
-
 
 // ANCHOR ПОИСК В МАССИВЕ
 // let arrFiveteen = ['sa', 'va', 'da', 'troi']
@@ -141,8 +140,8 @@
 
 // console.log(arr3.reverse())
 
-// ANCHOR ПРЕОБРАЗОВАНИЕ МАССИВОВ 
- 
+// ANCHOR ПРЕОБРАЗОВАНИЕ МАССИВОВ
+
 // let arr4 = ['эМиссия ', 'цирк', 'пшик', 'база', 'ачо', 'импликация', 'город']
 
 // let result = arr4.map(function(item, index, array){
@@ -163,7 +162,7 @@
 // // let str = arr7.join(',')
 // // console.log(str)
 
-// //преобразование массива в строку 
+// //преобразование массива в строку
 // console.log(String(arr7))
 
 // ANCHOR МЕТОД Array.isArray
@@ -184,7 +183,7 @@
 //     console.log('Не массив, не на массе')
 // }
 
-// ANCHOR ПРЕОБРАЗОВАНИЕ ЭЛЕМЕНТОВ МАССИВА 
+// ANCHOR ПРЕОБРАЗОВАНИЕ ЭЛЕМЕНТОВ МАССИВА
 
 // let arr0 = ['ol', 'lo', 'olo', 'lol']
 
@@ -241,3 +240,70 @@
 // let green = arr1.splice(2,1)
 // arr1.push(green)
 // console.log(arr1)
+
+// ANCHOR ЦИКЛЫ FOR И WHILE
+
+// let num = 5
+// while (num <= 14) {
+//     console.log(num)
+//     num++
+// }
+
+// for (let num = 1488; num >= 10; num--) {
+//     console.log(num)
+// }
+// for (let num = 11; num <= 56; num++) {
+//     console.log(num)
+// }
+
+// ANCHOR ДИРЕКТИВА BREAK
+
+// let num = 14
+// for (; num > 8; num--) {
+//     console.log(num);
+//     if (num == 10) break;
+// }
+// console.log(`это всё, число вот оно - ${num}`)
+
+// ANCHOR ДИРЕКТИВА CONTINUE
+// let num = 2
+// for(; num < 12; num++) {
+//     if(num == 6) continue
+//     console.log(num)
+// }
+
+// firstFor: for (let num = 0; num < 4; num++) {
+//   for (let size = 5; size < 9; size++) {
+//     if (num == 3) {
+//       break firstFor;
+//     }
+//     if (size == 8) {continue
+//     }
+//     console.log('num -', num);
+//     console.log('size -', size)
+//   }
+// }
+
+// ANCHOR ОБЪЯВЛЕНИЕ ФУНКЦИИ 
+// function sayHello() {
+//     console.log('Hello!');
+//    }
+//    // or
+//    const sayHello = function() {
+//     console.log('Hello!');
+//    }
+
+// var fullName = function(firstName, lastName) {
+//     return firstName + ' ' + lastName;
+//    }
+//    console.log(fullName('Jason', 'Krol'));
+
+let person = {};
+person.firstName = 'Jason'; // properties
+person.lastName = 'Krol';
+person.fullName = function() { // methods
+ return this.firstName + ' ' + this.lastName;
+}
+person.colors = ['red', 'blue', 'green']; // array property
+
+console.log(person)
