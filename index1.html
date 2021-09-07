@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#" method='get'>
+        <div>
+            <p>Имя</p>
+            <input  placeholder='Имя' tabeindex='1' name='username' type='text' />
+        </div>
+        <div>
+            <p>Пароль</p>
+            <input placeholder='Пароль' tabeindex='2' name='userpass' type='password' />
+        </div>
+           <div>
+            <p>Телефон</p>
+            <input placeholder='Телефон' tabeindex='3' name='userphone' type='tel' />
+           </div>
+             <div>
+                <p>Пол</p>
+                <div>
+                    <input checked type="radio" tabeindex='4' name='sex' value='male'> Мужской
+                <div>
+                    <input type="radio" name='sex' tabeindex='4' value='female'> Женский
+                </div>
+                </div>
+            </div>
+            <div>      
+             <p>Имущество</p>
+             <div>
+                 <input checked type="checkbox" name='bike' tabeindex='5' value='yes'/> Велик
+             </div>
+             <div>
+                <input type="checkbox" name='car' tabeindex='6' value='yes'/> Машина
+            </div>
+            <div>
+                <input disabled type="checkbox" name='house' tabeindex='7' value='yes'/> Дом
+            </div>
+             </div>
+            <div>
+                <p>Чёто ещё</p>
+                <textarea tabeindex='8' name='text'></textarea>
+            </div>
+            <div>
+                <p>Прикрепить фото</p>
+                <input tabeindex='9' type='file' name="userphoto" />
+            </div>
+            <div>
+                <p>Любимый цвет</p>
+                <select tabeindex='10' name='color'>
+                <option value="red"> Красный </option>
+                <option value="green"> Зелёный </option>
+                <option value="grey"> Серый </option>
+                <option selected value="pink"> Розовый </option> 
+                </select>
+            </div>
+            <div><p>Действие</p>
+            <button tabeindex='11' type='submit'>Отправить</button>
+            <button tabeindex='12' type='reset'>Очистить</button>
+
+            </div>
+    </form>
+
+</body>
+</html>

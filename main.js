@@ -293,17 +293,53 @@
 //     console.log('Hello!');
 //    }
 
-// var fullName = function(firstName, lastName) {
+// let fullName = function(firstName, lastName) {
 //     return firstName + ' ' + lastName;
 //    }
 //    console.log(fullName('Jason', 'Krol'));
 
-let person = {};
-person.firstName = 'Jason'; // properties
-person.lastName = 'Krol';
-person.fullName = function() { // methods
- return this.firstName + ' ' + this.lastName;
-}
-person.colors = ['red', 'blue', 'green']; // array property
+// let person = {};
+// person.firstName = 'Jason'; // properties
+// person.lastName = 'Krol';
+// person.fullName = function() { // methods
+//  return this.firstName + ' ' + this.lastName;
+// }
+// person.colors = ['red', 'blue', 'green']; // array property
 
-console.log(person)
+// console.log(person)
+
+// ANCHOR ПРЕОБРАЗОВАНИЕ ТИПОВ ДАННЫХ 
+
+// let age = 56
+// console.log(age)
+// age = String(age)
+// console.log(age)
+// console.log(typeof age)
+
+// let war = true
+// console.log(war)
+// war = String(war)
+// console.log(war)
+// console.log(typeof war)
+
+// let civ = '123'
+// console.log(civ)
+// civ = Number(civ)
+// console.log(civ)
+// console.log(typeof civ)
+
+// ANCHOR ОПЕРАТОРЫ JS 
+// Унарный оператор сложения 
+
+// let n = +'25'
+// console.log(n)
+// console.log(typeof n)
+
+
+console.log('25' + - '13')
+console.log('25' * '13')
+console.log('25' - '13')
+let u = 0;
+let uu = 0;
+u > uu++
+console.log(uu)
