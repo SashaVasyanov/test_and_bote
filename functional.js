@@ -238,7 +238,7 @@
 
 // const number = +prompt('Введите число между 0 и 3', '');
 // switch (number) {
-// case 0: 
+// case 0:
 // alert('Вы ввели число 0')
 // break;
 // case 1:
@@ -262,7 +262,7 @@
 // function sum(a, b) {
 //     return a + b;
 //   }
-  
+
 //   let result = sum(5, 14);
 //   alert( result )
 
@@ -275,7 +275,7 @@
 // function chekAn(an) {
 //     if (an === 'Люблю') {
 //         return true
-//     } 
+//     }
 //     else if (an === 'Да') {
 //         return true
 //     }
@@ -290,17 +290,16 @@
 //     alert('lox')
 // }
 
-
 // let n = 21
 // function showPrimes(n) {
 
 //     for (let i = 2; i < n; i++) {
 //       if (!isPrime(i)) continue;
-  
+
 //       alert(i);  // простое
 //     }
 //   }
-  
+
 //   function isPrime(n) {
 //     for (let i = 2; i < n; i++) {
 //       if ( n % i == 0) return false;
@@ -336,3 +335,64 @@
 //   return(x ** n)
 // }
 // alert(pow(5,5))
+
+// function ask(question, yes, no) {
+//     if (confirm(question)) yes()
+//     else no();
+// }
+
+// function accept() {
+//     alert('Принято');
+// }
+// function noAccept() {
+//     alert('Отклонено');
+// }
+// ask('Вы согласны', accept, noAccept)
+
+// function ask(question, yes, no) {
+//     if (confirm(question)) yes()
+//     else no();
+//   }
+
+//   ask(
+//     "Привет, ты тут?",
+//     function() { alert("Он дома"); },
+//     function() { alert("Его тут нет") }
+//   );
+
+// let a = prompt ('Какой сегодня день?', '')
+// let day
+// if (a === 'среда' && 'понедельник' && 'вторник') {
+//     day = function() {
+//         alert('Отличное начало недели!')
+//     }
+// } else  if (a === 'пятница' && 'суббота' && 'четверг') {
+//     day = function() {
+//         alert('Отличный конец недели')
+//     }
+// } else {
+//     alert('ошибка')
+// }
+
+// day()
+
+// let ask = (question, yes, no) => {
+//     (confirm(question)) ?
+//     yes = alert('Вы согласны') :
+//     no = alert('Вы отказались');
+// }
+
+// ask('Вы согласны?')
+
+// let mult = 2 ** 3;
+// switch (mult) {
+//   case 4:
+//     alert("Вы ввели 2");
+//     break;
+//   case 27:
+//     alert("Вы ввели 3");
+//     break;
+//   default:
+//     alert("Ошибка");
+// }
+// mult();
