@@ -396,3 +396,109 @@
 //     alert("Ошибка");
 // }
 // mult();
+
+// function pow(x, n) {
+//     let result = 1;
+  
+//     for (let i = 0; i < n; i++) {
+//         console.log('это резул', result)
+//       result *= x;
+//     }
+  
+//     return result;
+//   }
+
+//  console.log(pow(3,6))
+
+// let user2 = {
+//   name: 'Alex',
+//   age: 15,
+//   likeBirds: true,
+  
+// };
+
+// for(let key in user2) {
+//   alert(key);
+//   alert(user2[key])
+// }
+// let key = prompt('Узнать о пользователе:', 'name')
+// alert(user[key])
+
+// function makeUser(name, age, phone) {
+//   return{
+//     name: name,
+//     age: age,
+//     phone: phone,
+// } }
+// let user = makeUser('Sasha', 25, 'apple');
+// alert(user.age)
+// alert(user.name)
+// alert(user.phone)
+// alert('dota' in makeUser)
+
+
+
+// let user = {};
+// user.name = 'Pete';
+// user.surname = 'Smith';
+// user.name = 'Vasya';
+// delete user.name;
+
+
+//  let obj = {
+//   //  firstKey: 1212,
+//   //  secondKey:'Ded',
+//  } 
+// function isEmpty(obj) {
+//   for (let key in obj) {
+//     // если тело цикла начнет выполняться - значит в объекте есть свойства
+   
+//     return false;
+    
+//   }  
+//   return true;
+  
+// }
+// console.log(isEmpty(obj))
+// isEmpty()
+
+// let salaries = {
+//   John: 100,
+//   Ann: 160,
+//   Pete: 130
+// }
+// let sum = 0
+// for (let key in salaries) {
+//   sum += salaries[key]
+// }
+// console.log(sum)
+
+let menu = {
+  name: 200,
+  age: 300,
+  title: "My menu"
+}
+function m(obj) { 
+  for (let prop in obj) {
+    console.log(prop)
+    if (typeof obj[prop] === 'number') {
+    obj[prop] *= 2;
+    }
+  } 
+}
+m(menu)
+console.log(menu)
+let menu2 = {
+  width: 200,
+  height: 300,
+  title: "My menu"
+};
+function multiplyNumeric(obj) {
+  for (let key in obj) {
+    if (typeof obj[key] == 'number') {
+      obj[key] *= 2;
+    }
+  }
+}
+multiplyNumeric(menu2)
+console.log(menu2)
