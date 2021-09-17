@@ -1,3 +1,4 @@
+ 
 // let favoriteNum = prompt('Твоё любимое число', );
 // alert(`Твоё любимое число ${favoriteNum}`)
 
@@ -473,32 +474,78 @@
 // }
 // console.log(sum)
 
-let menu = {
-  name: 200,
-  age: 300,
-  title: "My menu"
+// let menu = {
+//   name: 200,
+//   age: 300,
+//   title: "My menu"
+// }
+// function m(obj) { 
+//   for (let prop in obj) {
+//     console.log(prop)
+//     if (typeof obj[prop] === 'number') {
+//     obj[prop] *= 2;
+//     }
+//   } 
+// }
+// m(menu)
+// console.log(menu)
+// let menu2 = {
+//   width: 200,
+//   height: 300,
+//   title: "My menu"
+// };
+// function multiplyNumeric(obj) {
+//   for (let key in obj) {
+//     if (typeof obj[key] == 'number') {
+//       obj[key] *= 2;
+//     }
+//   }
+// }
+// multiplyNumeric(menu2)
+// console.log(menu2)
+
+// ANCHOR МЕТОД копирования объекта в отдельную переменную 
+
+let users = {
+  name: 'Egor', 
+  age: 15,
+  city: 'Moscow',
+  favoriteDish: 'chips',
 }
-function m(obj) { 
-  for (let prop in obj) {
-    console.log(prop)
-    if (typeof obj[prop] === 'number') {
-    obj[prop] *= 2;
-    }
-  } 
+let cloneUsers = {};
+
+for(let key in users) {
+  cloneUsers[key] = users[key];
 }
-m(menu)
-console.log(menu)
-let menu2 = {
-  width: 200,
-  height: 300,
-  title: "My menu"
-};
-function multiplyNumeric(obj) {
-  for (let key in obj) {
-    if (typeof obj[key] == 'number') {
-      obj[key] *= 2;
-    }
+console.log(cloneUsers)
+
+// ANCHOR МЕТОД Object.assign 
+
+let a = {day: 'friday'};
+let b = {week: 'five'};
+let e = {weekend: 'not'}
+
+let z = Object.assign(a, b, e)
+console.log(z)
+
+let jmuser = {
+  name: 'Serg',
+  age: 214,
+  isFool: true,
+}
+
+let cloneSrg = ({}, jmuser)
+console.log (cloneSrg) 
+
+// ANCHOR ГЛУБОКОЕ КОПИРОВАНИЕ, МЕТОД _.cloneDeep(object)
+var _ = require('lodash')
+let object1 = {
+  name: 'Vasya',
+  size: {
+  width: 150,
+  height: 250, 
   }
 }
-multiplyNumeric(menu2)
-console.log(menu2)
+
+let object2 = _.cloneDeep(object1)
+console.log(object2)
