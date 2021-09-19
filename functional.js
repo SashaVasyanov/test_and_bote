@@ -2,6 +2,8 @@
 // let favoriteNum = prompt('Твоё любимое число', );
 // alert(`Твоё любимое число ${favoriteNum}`)
 
+// const { sum } = require("lodash");
+
 // let chmaOrNot = confirm('Ты чма?')
 // alert(chmaOrNot)
 
@@ -506,46 +508,228 @@
 
 // ANCHOR МЕТОД копирования объекта в отдельную переменную 
 
-let users = {
-  name: 'Egor', 
-  age: 15,
-  city: 'Moscow',
-  favoriteDish: 'chips',
-}
-let cloneUsers = {};
+// let users = {
+//   name: 'Egor', 
+//   age: 15,
+//   city: 'Moscow',
+//   favoriteDish: 'chips',
+// }
+// let cloneUsers = {};
 
-for(let key in users) {
-  cloneUsers[key] = users[key];
-}
-console.log(cloneUsers)
+// for(let key in users) {
+//   cloneUsers[key] = users[key];
+// }
+// console.log(cloneUsers)
 
 // ANCHOR МЕТОД Object.assign 
 
-let a = {day: 'friday'};
-let b = {week: 'five'};
-let e = {weekend: 'not'}
+// let a = {day: 'friday'};
+// let b = {week: 'five'};
+// let e = {weekend: 'not'}
 
-let z = Object.assign(a, b, e)
-console.log(z)
+// let z = Object.assign(a, b, e)
+// console.log(z)
 
-let jmuser = {
-  name: 'Serg',
-  age: 214,
-  isFool: true,
-}
+// let jmuser = {
+//   name: 'Serg',
+//   age: 214,
+//   isFool: true,
+// }
 
-let cloneSrg = ({}, jmuser)
-console.log (cloneSrg) 
+// let cloneSrg = ({}, jmuser)
+// console.log (cloneSrg) 
 
 // ANCHOR ГЛУБОКОЕ КОПИРОВАНИЕ, МЕТОД _.cloneDeep(object)
-var _ = require('lodash')
-let object1 = {
-  name: 'Vasya',
-  size: {
-  width: 150,
-  height: 250, 
-  }
+// var _ = require('lodash')
+// let object1 = {
+//   name: 'Vasya',
+//   size: {
+//   width: 150,
+//   height: 250, 
+//   }
+// }
+
+// let object2 = _.cloneDeep(object1)
+// console.log(object2)
+
+
+
+//ANCHOR МЕТОД ОБЪЕКТА THIS
+// let vasya = {
+//   name: 'Vasya',
+//   age: 27,
+//   sex: 'male',
+//   isCostumer: true,
+
+//   sayHello() {
+//     alert(this.name)
+//   }
+// }
+// vasya.sayHello()
+
+// let vadimus = {name: 'Amogus'}
+// let amogus = {name: 'Vadimus'}
+
+// function sayAmogus() {
+//   alert(this.name)
+// }
+
+// vadimus.f = sayAmogus;
+// amogus.f = sayAmogus;
+
+// vadimus.f();
+// amogus.f();
+
+//ANCHOR КАЛЬКУЛЯТОР
+// let calculator = { 
+//   firstNumber: 0,
+//   secondNumber: 0,
+//   read() {
+//   this.firstNumber = +prompt('Введите число', '')
+//   this.secondNumber = +prompt('Введите второе число', '')
+//   },
+//   sum() {
+//     return (this.firstNumber + this.secondNumber)
+//   },
+//   mul() {
+//     return (this.firstNumber * this.secondNumber)
+//   }
+// };
+
+// calculator.read()
+// alert(calculator.sum())
+// alert(calculator.mul())
+
+
+// let ladder = {
+//   step: 0,
+//   up() {
+//    this.step++;
+//    return this;
+//   },
+//   down() {
+//     this.step--;
+//     return this;
+//   },
+//   showStep: function() { // показывает текущую ступеньку
+//     alert( this.step );
+//   }
+// };
+// console.log(ladder)
+
+// console.log(ladder.up().up().down())
+
+//ANCHOR ФУНКЦИЯ КОНСТРУКТОР,THIS и return в ней
+
+// function SmallUser() {
+
+//   this.name = "Вася";
+
+//   return; // <-- возвращает this
+// }
+// let smale = new SmallUser()
+
+
+
+
+// function Accamulator(startingValue) {
+// this.value = startingValue;
+// this.read = function() {
+//   this.value += +prompt('Добавьте число', 0);
+// };
+// }
+
+// let accum = new Accamulator(1)
+// accum.read()
+// accum.read()
+// alert(accum.value)
+
+//ANCHOR МЕТОД ?. - ОПЦИОНАЛЬНАЯ ЦЕПОЧКА
+
+// let bro = {
+//   name: 'Dva',
+//   age: 3,
+//   address: 'Pushkina',
+// }
+// let key = 'name';
+// let key2 = 'age';
+// let key3 = 'address';
+
+//   alert(bro?.[key])
+//   alert(bro?.[key2])
+
+//ANCHOR SYMBOL
+
+// let a = Symbol('id')
+// alert(a.toString())
+// alert(a.description)
+
+// let id = Symbol('id')
+// let user = {
+//   name: 'dva',
+//   [id]: 54,
+// }
+// alert('Вот это да ' + user[id])
+
+//ANCHOR ПРЕОБРАЗОВАНИЕ ОБЪЕКТОВ В ПРИМИТИВЫ 
+// let user = {
+//   name: "John",
+//   money: 1000,
+
+//   [Symbol.toPrimitive](hint) {
+//     alert(`hint: ${hint}`);
+//     return hint == "string" ? `{name: "${this.name}"}` : this.money;
+//   }
+// };
+
+// // демонстрация результатов преобразований:
+// alert(user); // hint: string -> {name: "John"}
+// alert(+user); // hint: number -> 1000
+// alert(user + 500); // hint: default -> 1500
+
+
+////////////////
+// let sum = 0.2 + 0.4
+// console.log(+sum.toFixed(1))
+
+// let z = +prompt('Введите число', 5)
+// let z1 = +prompt('Число', 2 )
+
+// let sum = z + z1
+
+// alert(sum)
+// let a1 = function() {
+//  if(z === Number)
+//  return (z + z1)
+// }
+
+// alert(a1)
+// console.log(a1)
+// function readNumber() {
+//   let num
+
+//   do {
+//     num = prompt('Введите число', 0)
+//   } while (!isFinite(num));
+//   if(num === null || num === '') return null
+//   return +num;
+// }
+// alert(`Число: ${readNumber()}`)
+
+
+// function random(min, max) {
+//   return min + Math.random() * (max - min);
+// }
+
+// alert( random(4, 123) );
+// alert( random(1, 5) );
+// alert( random(1, 5) );
+
+
+function randomInteger(min, max) {
+  // случайное число от min до (max+1)
+  let rand = min + Math.random() * (max - min);
+  return Math.floor(rand);
 }
 
-let object2 = _.cloneDeep(object1)
-console.log(object2)
+alert( randomInteger(2, 15) );
