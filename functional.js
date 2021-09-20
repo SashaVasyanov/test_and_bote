@@ -2,6 +2,8 @@
 // let favoriteNum = prompt('Твоё любимое число', );
 // alert(`Твоё любимое число ${favoriteNum}`)
 
+// 
+
 // const { sum } = require("lodash");
 
 // let chmaOrNot = confirm('Ты чма?')
@@ -726,10 +728,82 @@
 // alert( random(1, 5) );
 
 
-function randomInteger(min, max) {
-  // случайное число от min до (max+1)
-  let rand = min + Math.random() * (max - min);
-  return Math.floor(rand);
+// function randomInteger(min, max) {
+//   // случайное число от min до (max+1)
+//   let rand = min + Math.random() * (max - min);
+//   return Math.floor(rand);
+// }
+
+// alert( randomInteger(2, 15) );
+
+
+///ANCHOR STRING И МЕТОДЫ СТРОКИ
+
+// let str = 'доппельгангер'
+// console.log(str.slice(-6, -2))
+
+
+// function uPper(str) {
+//   if (!str) return str;
+  
+//   return str[0].toUpperCase() + str.slice(1);
+
+// }
+// console.log(uPper('вася'))
+
+// function spam(str1) {
+//   if (str === 'viagra' || 'xxx' || 'Viagra' || 'XXX')
+//   return false
+//   else true
+// }
+// console.log(spam('Viagra xxx'))
+
+
+
+// function checkSpam(str) {
+//   let lowerStr = str.toLowerCase();
+
+//   return lowerStr.includes('viagra') || lowerStr.includes('xxx');
+// }
+
+// function truncate(str2, maxlength) {
+//   return (str2.length > maxlength) ?
+//     str2.slice(0, maxlength - 1) + '…' : str2;
+// }
+// let a = 'lorem impesad sadsad sdfdfsde sadsad etgkkg sad sadsad vvfdrtght sadwqdqd cdcacsasedwqeqgsdgsdgdwqdqwdsad'
+// console.log(a.length)
+// console.log(truncate(a, 24))
+
+
+//ANCHOR МАССИВЫ 
+// let matrix = [
+//   [1, 2, 3],
+//   [4, 5, 6],
+//   [7, 8, 9]
+// ];
+
+// alert( matrix[1][1] ); // 5, центральный элемент
+
+function sumInput() {
+
+  let numbers = [];
+
+  while (true) {
+
+    let value = prompt("Введите число", 0);
+
+    
+    if (value === "" || value === null || !isFinite(value)) break;
+
+    numbers.push(+value);
+  }
+
+  let sum = 0;
+  for (let number of numbers) {
+    sum +=  number;
+    console.log(number)
+  }
+  return sum;
 }
 
-alert( randomInteger(2, 15) );
+alert(sumInput());
