@@ -784,26 +784,84 @@
 
 // alert( matrix[1][1] ); // 5, центральный элемент
 
-function sumInput() {
+// function sumInput() {
 
-  let numbers = [];
+//   let numbers = [];
 
-  while (true) {
+//   while (true) {
 
-    let value = prompt("Введите число", 0);
+//     let value = prompt("Введите число", 0);
 
     
-    if (value === "" || value === null || !isFinite(value)) break;
+//     if (value === "" || value === null || !isFinite(value)) break;
 
-    numbers.push(+value);
-  }
+//     numbers.push(+value);
+//   }
 
-  let sum = 0;
-  for (let number of numbers) {
-    sum +=  number;
-    console.log(number)
-  }
-  return sum;
+//   let sum = 0;
+//   for (let number of numbers) {
+//     sum +=  number;
+//     console.log(number)
+//   }
+//   return sum;
+// }
+
+// alert(sumInput());
+
+
+
+// function getMaxSubSum(arr) {
+//   let maxSum = 0;
+//   let partialSum = 0;
+
+//   for (let item of arr) { // для каждого элемента массива
+//     partialSum += item; // добавляем значение элемента к partialSum
+//     maxSum = Math.max(maxSum, partialSum); // запоминаем максимум на данный момент
+//     if (partialSum < 0) partialSum = 0; // ноль если отрицательное
+//   }
+
+//   return maxSum;
+// }
+// console.log(getMaxSubSum([1,2,4,7,2,-24,52,215,5,-123]))
+
+// let users = [
+//   {id: 1, name: "Вася"},
+//   {id: 2, name: "Петя"},
+//   {id: 3, name: "Маша"},
+//   {id: 4, name: "Егор"},
+//   {id: 5, name: "Паша"},
+// ];
+
+// let user = users.find(item => item.id == 5);
+
+// console.log(user.name); // Вася
+
+
+// let obj = [
+//   {num: 1, gold: 'yes', numerus: 'many'},
+//   {num: 2, gold: 'no', numerus: 1234},
+// ]
+
+
+// let ob = obj.find(item => item.num === 2)
+// console.log(ob.numerus)
+
+// function camelize(str) {
+//   return str 
+//   .split('-')
+//   .map((word, index) => index == 0 ? word : word[0].toUpperCase() + word.slice(1))
+//   // //? - if (index == 0) {
+//   //   return word (если индекс равен нулю возвращает всё слово)
+//   // // } else {
+//   //   return word[0].toUpperCase() + word.slice(1) (если индекс не равен нулю, то возвращает слово, где первая буква становится
+//   // заглавной )
+//   // }
+//   .join('')
+// }
+// console.log(camelize('i-live-in-the-dream'))
+function filterRange(arr, a, b){
+return arr.filter(item => item >= a && item <= b)
 }
-
-alert(sumInput());
+let arr1 = [2,4,1,3,5,8]
+let newArr = filterRange(arr1, 2, 4)
+console.log(newArr)
