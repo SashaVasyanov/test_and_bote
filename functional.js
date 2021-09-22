@@ -859,9 +859,161 @@
 //   .join('')
 // }
 // console.log(camelize('i-live-in-the-dream'))
-function filterRange(arr, a, b){
-return arr.filter(item => item >= a && item <= b)
+// function filterRange(arr, a, b){
+// return arr.filter(item => item >= a && item <= b)
+// }
+// let arr1 = [2,4,1,3,5,8]
+// let newArr = filterRange(arr1, 2, 4)
+// console.log(newArr)
+
+
+// function filterRangeInPlace(arr, a, b) {
+
+//   for (let i = 0; i < arr.length; i++) {
+//     let val = arr[i];
+
+//     // удалить, если за пределами интервала
+//     if (val < a || val > b) {
+//       arr.splice(i, 1);
+//       i--;
+//     }
+//   }
+                                              
+// }
+
+// let arr = [5, 3, 8, 1, 0, 2, 4];
+
+// filterRangeInPlace(arr, 1, 4); // удалены числа вне диапазона 1..4
+
+// console.log( arr );
+
+// function rze(arr, a, b) {
+//   for (let i = 0; i < arr.length; i++){
+//   let value = arr[i]
+//   if (value < a || value > b) {
+//     arr.splice(i, 1);
+//     i--
+//   }
+// }
+// }
+// let arr2 = [1, 41, 12, 56, 10, 51, 2, 4, 3, 6, 4]
+// rze(arr2, 2, 100)
+// console.log(arr2)
+
+
+// let arr3 = [5, 2, 1, -10, 8];
+// //Для первой a 
+// // 5 - 2 = 1; 2 - 1 = 1; 1 -(-10) = 1; -10 - 8 = 1
+// //
+// // Для первой b 
+// // 2 - 5 = -1; 1 - 2= -1; -10 - 1= -1; 8 - (-10) = 1
+
+// arr3.sort((a, b) => a - b);  
+
+// console.log( arr3 );
+
+
+// function copySorted(arr) {
+//   return arr.slice().sort();
+// }
+
+// let arr4 = ["HTML", "JavaScript", "CSS", "Misha_chmo_and_gay"];
+
+// let sorted = copySorted(arr4);
+
+// console.log( sorted );
+// // console.log( arr4 );
+
+
+// function Calculator() {
+
+//   this.methods = {
+//     "-": (a, b) => a - b,
+//     "+": (a, b) => a + b
+//   };
+
+//   this.calculate = function(str) {
+
+//     let split = str.split(' '),
+//       a = +split[0],
+//       op = split[1],
+//       b = +split[2]
+
+//     if (!this.methods[op] || isNaN(a) || isNaN(b)) {
+//       return NaN;
+//     }
+
+//     return this.methods[op](a, b);
+//   }
+
+//   this.addMethod = function(name, func) {
+//     this.methods[name] = func;
+//   };
+// }
+// let powerCalc = new Calculator;
+// powerCalc.addMethod("*", (a, b) => a * b);
+// powerCalc.addMethod("/", (a, b) => a / b);
+// powerCalc.addMethod("**", (a, b) => a ** b);
+// powerCalc.addMethod("&&", (a, b) => a * 2 * b + 1)
+// let result = powerCalc.calculate("2 ** 3");
+// let res = powerCalc.calculate('2 && 4')
+// console.log(res)
+// console.log( result ); // 8
+
+// let vasya = { name: "Вася", surname: "Пупкин", id: 2 };
+// let petya = { name: "Петя", surname: "Иванов", id: 14 };
+// let masha = { name: "Маша", surname: "Петрова", id: 1 };
+
+// let users = [ vasya, petya, masha ];
+
+// let usersMapped = function(arr) {
+// arr.sort((a, b) => a.id - b.id)
+// }
+// let usersMapped1 = users.map(user => ({
+//   fullName: `${user.name} ${user.surname}`,
+//   id: user.id
+// }));
+
+// console.log(usersMapped1)
+
+// usersMapped(users)
+// console.log(users[0].name)
+// console.log(users[1].name)
+// console.log(users[2].name)
+
+// function shuffle(array) {
+//   array.sort(() => Math.random() - 0.5);
+// }
+
+// let arr = [1, 2, 3, 4, 5, 6, 7];
+// shuffle(arr);
+// console.log(arr);
+
+// let vasya = { name: "Вася", age: 25 };
+// let petya = { name: "Петя", age: 30 };
+// let masha = { name: "Маша", age: 29 };
+
+// let arr = [ vasya, petya, masha ];
+
+// function getAverAge(users) {
+//   return users.reduce((prev, user) => prev + user.age, 0) / users.length
+// }
+// console.log(getAverAge(arr))
+
+function unique(arr) {
+  let cmult = [];
+
+  for (let grt of arr) {
+    if (!cmult.includes(grt)) {
+      cmult.push(grt);
+    }
+  }
+
+  return cmult;
 }
-let arr1 = [2,4,1,3,5,8]
-let newArr = filterRange(arr1, 2, 4)
-console.log(newArr)
+
+let strings = ["кришна", "кришна", "харе", "харе",
+  "харе", "харе", "кришна", "кришна", ":-O", ":-O", "Baza", "baza", "Baza", "baza"
+];
+
+console.log(unique(strings))
