@@ -1000,20 +1000,61 @@
 // }
 // console.log(getAverAge(arr))
 
-function unique(arr) {
-  let cmult = [];
+// function unique(arr) {
+//   let cmult = [];
 
-  for (let grt of arr) {
-    if (!cmult.includes(grt)) {
-      cmult.push(grt);
-    }
-  }
+//   for (let grt of arr) {
+//     if (!cmult.includes(grt)) {
+//       cmult.push(grt);
+//     }
+//   }
 
-  return cmult;
-}
+//   return cmult;
+// }
 
-let strings = ["кришна", "кришна", "харе", "харе",
-  "харе", "харе", "кришна", "кришна", ":-O", ":-O", "Baza", "baza", "Baza", "baza"
-];
+// let strings = ["кришна", "кришна", "харе", "харе",
+//   "харе", "харе", "кришна", "кришна", ":-O", ":-O", "Baza", "baza", "Baza", "baza"
+// ];
 
-console.log(unique(strings))
+// console.log(unique(strings))
+
+
+// ANCHOR МЕТОДЫ map, set 
+
+// function unique(arr){
+//   return Array.from(new Set(arr))
+// }
+// let values = ["Hare", "Krishna", "Hare", "Krishna",
+//   "Krishna", "Krishna", "Hare", "Hare", ":-O"
+// ];
+// alert(unique(values))
+
+
+
+// function aclean(arr) {
+//   let obj = {};
+
+//   for (let i = 0; i < arr.length; i++) {
+//     let sorted = arr[i].toLowerCase().split("").sort().join("");
+//     obj[sorted] = arr[i];
+//   }
+
+//   return Object.values(obj);
+// }
+
+// let arr = ["nap", "teachers", "cheaters", "PAN", "ear", "era", "hectares"];
+
+// alert( aclean(arr) );
+
+let map = new Map();
+
+map.set("name","John");
+map.set("son", "His")
+console.log(map)
+let keys = Array.from(map.keys());
+let values = Array.from(map.values())
+values.push("12")
+console.log(keys)
+keys.push("age");
+console.log(values)
+// console.log(keys)
