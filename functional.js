@@ -1046,15 +1046,65 @@
 
 // alert( aclean(arr) );
 
-let map = new Map();
+// let map = new Map();
 
-map.set("name","John");
-map.set("son", "His")
-console.log(map)
-let keys = Array.from(map.keys());
-let values = Array.from(map.values())
-values.push("12")
-console.log(keys)
-keys.push("age");
-console.log(values)
+// map.set("name","John");
+// map.set("son", "His")
+// console.log(map)
+// let keys = Array.from(map.keys());
+// let values = Array.from(map.values())
+// values.push("12")
 // console.log(keys)
+// keys.push("age");
+// console.log(values)
+// // console.log(keys)
+
+
+//ANCHOR Методы Object.keys(obj), Object.values(obj), Object.entries(obj)
+
+let user = {
+  name: "John",
+  age: 15,
+  sex: 'male',
+}
+for (let key of Object.keys(user)) {
+  console.log(key)
+}
+for (let entrie of Object.entries(user)) {
+  console.log(entrie)
+}
+for (let value of Object.values(user)) {
+  console.log(value)
+}
+
+let sales = {
+  auto: 12,
+  bus: 10,
+  airplane: 11,
+}
+let doubleSales = Object.fromEntries(
+  Object.entries(sales).map(([key, value]) => [key, value * 2])
+)
+console.log(doubleSales.auto)
+console.log(doubleSales)
+
+
+let salaries = {
+  "John": 100,
+  "Pete": 300,
+  "Mary": 250
+};
+
+function sumSalar() {
+ let sum = 0
+ for (let salary of Object.values(salaries)) {
+   sum += salary
+ }
+ return sum
+}
+console.log(sumSalar(salaries))
+
+function count(obj) {
+  return Object.keys(obj).length
+}
+console.log(count(user))
