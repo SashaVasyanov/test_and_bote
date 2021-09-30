@@ -2,6 +2,10 @@
 // arrOne.splice(1,1)
 // console.log(arrOne)
 
+const { set } = require("lodash")
+
+
+
 // let arrTwo = [
 //     ['x', 'z', 'y'],
 //     ['a','b', 'n']
@@ -336,10 +340,132 @@
 // console.log(typeof n)
 
 
-console.log('25' + - '13')
-console.log('25' * '13')
-console.log('25' - '13')
-let u = 0;
-let uu = 0;
-u > uu++
-console.log(uu)
+// console.log('25' + - '13')
+// console.log('25' * '13')
+// console.log('25' - '13')
+// let u = 0;
+// let uu = 0;
+// u > uu++
+// console.log(uu)
+
+
+// let object = {
+// name: 'egor',
+// age: 14,
+// }
+
+// object =  new Map()
+// object.set(1, "cma")
+// console.log(object)
+
+
+// let vasya = {
+//     name: 'Vasya',
+//     age: 15,
+//     male: 'male'
+// }
+
+// for (let [key, value] of Object.entries(vasya)) {
+//     console.log(`${key}: ${value}`)
+// }
+
+// let [name1, name2, name3, ...rest] = ['egor', 'vasyanov', 'boy', 'schoolboy', 'fiveteen']
+// console.log(name1)
+// console.log(name3)
+// console.log(name3)
+
+// console.log(rest[0])
+// console.log(rest[1])
+
+// let [nm = 'vasya', nm2 = 'anonymus'] = ['Caeser']
+// console.log(nm)
+// console.log(nm2)
+
+// let elements = {
+// height: 100,
+// width: 200,
+// menu: 'Menu'
+// }
+// let {height, width, menu} = elements
+// console.log(height)
+// console.log(width)
+// console.log(menu)
+
+// let functional = {
+//     options: {
+//         width1: 200,
+//         height1: 100,
+//         size: 300,
+//     },
+//     items: ['cake','donut'],
+//     extra: true,
+// };
+
+// let { 
+//     options: {
+//     width1,
+//     height1,
+//     size,
+// },
+// items: [item1, item2],
+// title = 'menu',
+// } = functional
+// console.log(width1)
+// console.log(height1)
+// console.log(size)
+// console.log(item1)
+// console.log(item2)
+// console.log(title)
+
+// let options = {
+//     title: "My menu",
+//     items: ["Item1", "Item2"]
+//   };
+  
+//   function showMenu({
+//     title = "Untitled",
+//     width: w = 100,  // width присваиваем в w
+//     height: h = 200, // height присваиваем в h
+//     items: [item1, item2] // первый элемент items присваивается в item1, второй в item2
+//   }) {
+//     alert( `${title} ${w} ${h}` ); // My Menu 100 200
+//     alert( item1 ); // Item1
+//     alert( item2 ); // Item2
+//   }
+  
+//   showMenu(options);
+
+
+  let user = {
+      name1: 'Vasya',
+      years: 15,
+  }
+
+  let {name1, years: age, isAdmin = false} = user
+    console.log(name1)
+    console.log(age)
+    console.log(isAdmin)
+
+
+    let salaries = {
+        "John": 100,
+        "Pete": 300,
+        "Mary": 250
+      };
+
+
+      function topSalary(salaries) {
+
+        let max = 0;
+        let maxName = null;
+      
+        for(const [name, salary] of Object.entries(salaries)) {
+          if (max < salary) {
+            max = salary;
+            maxName = name;
+          }
+        }
+      
+        return maxName;
+      }
+      console.log(topSalary(salaries))
