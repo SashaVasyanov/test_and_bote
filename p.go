@@ -155,4 +155,23 @@ func main() {
 
 	fmt.Println(str)
 	fmt.Printf("%T	\n", a)
+	itoa(5, "Свиней ")
+	newArray := [3]string{"a", "b", "c"}
+	slice1 := newArray[0:2]
+	fmt.Println(slice1)
+	arr1 := [4]string{"a", "b", "c", "d"}
+	slice := arr1[3:4]
+	slice3 := arr1[:3]
+	slice4 := arr1[1:]
+	slice4 = append(slice4, "g", "q", "f")
+	fmt.Println(slice)
+	fmt.Println(slice3)
+	fmt.Println(slice4)
+	fmt.Println(slice3, slice4)
+}
+
+func itoa(i int, s string) {
+	tm := i
+	fmt.Println(s + strconv.Itoa(tm))
+
 }
