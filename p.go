@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"math"
 	"strconv"
 )
 
@@ -168,10 +169,42 @@ func main() {
 	fmt.Println(slice3)
 	fmt.Println(slice4)
 	fmt.Println(slice3, slice4)
+	pluralisNum(1, 2, 3, 4, 5, 6, 7, 345435)
+	pluralisStr("vasya plays dota,", "i hate smt,", "you love always all")
+	plur(false, 5, "games", "drames")
+	fmt.Println(maximum(123.123, 2.41, 1.5, 123.12124, 5.1, 8.123123))
+	fmt.Println(inRange(-14, 1488, 12, -124214, 12421421, 63464363, 54, 12, 53, 645, 6))
 }
 
 func itoa(i int, s string) {
 	tm := i
 	fmt.Println(s + strconv.Itoa(tm))
 
+}
+func pluralisNum(num1 ...int) {
+	fmt.Println(num1)
+}
+func pluralisStr(strings ...string) {
+	fmt.Println(strings)
+}
+func plur(boolean bool, num int, strings ...string) {
+	fmt.Println(boolean, num, strings)
+}
+func maximum(numbers ...float64) float64 {
+	max := math.Inf(-1)
+	for _, number := range numbers {
+		if number > max {
+			max = number
+		}
+	}
+	return max
+}
+func inRange(min float64, max float64, numbers ...float64) []float64 {
+	var result []float64
+	for _, number := range numbers {
+		if number >= min && number <= max {
+			result = append(result, number)
+		}
+	}
+	return result
 }
