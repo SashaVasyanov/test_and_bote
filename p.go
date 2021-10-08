@@ -174,6 +174,7 @@ func main() {
 	plur(false, 5, "games", "drames")
 	fmt.Println(maximum(123.123, 2.41, 1.5, 123.12124, 5.1, 8.123123))
 	fmt.Println(inRange(-14, 1488, 12, -124214, 12421421, 63464363, 54, 12, 53, 645, 6))
+	fmt.Println(average(5, 1, 6, 123, 35, 643, 214, 15))
 }
 
 func itoa(i int, s string) {
@@ -207,4 +208,11 @@ func inRange(min float64, max float64, numbers ...float64) []float64 {
 		}
 	}
 	return result
+}
+func average(numbers ...float64) float64 {
+	var sum float64 = 0
+	for _, num := range numbers {
+		sum += num
+	}
+	return sum / float64(len(numbers))
 }
